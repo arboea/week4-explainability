@@ -1,4 +1,9 @@
 # LIME explainability demo
+REFLECTION
+
+This exercise highlights the need to maintain explainability to a wider audience. The resulting graphic from the AI's work does not adequetly explain on its own what the data is showing. The simple labels on the X and Y axis do not convey the message in basic and easily understandable terms. Human intervention is required to clearly articulate the findings. 
+
+My hope would be that over time, the output can be improved to provide much better explainability without impacting accuracy of the output. I believe that with the proper guidelines and safeguards in place, this can be accomplished. AI as it exists currently cannot be allowed to simply trusted without oversight and some form of vetting process. While AI is a powerful tool, it does not yet know how to provide its output in a manner that is easy for many to digest and does not provide the context behind the output unless directed to do so. This puts a greater emphasis on expainability over accuracy. 
 
 This folder contains a small demo that trains a logistic regression model on the breast cancer dataset and uses LIME to explain predictions.
 
