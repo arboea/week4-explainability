@@ -31,3 +31,28 @@ Outputs:
 
 - `outputs/lime_local_explanation.png` — local LIME explanation for one test instance
 - `outputs/lime_global_importance.png` — aggregated feature importance from several LIME explanations
+
+SHAP
+
+- `shap_explain.py`: trains the same logistic regression model and produces SHAP visualizations.
+- `outputs/shap_summary.png` — SHAP summary plot (global view of feature impacts)
+- `outputs/shap_global_importance.png` — aggregated mean |SHAP value| bar plot
+
+To run the SHAP demo (PowerShell):
+
+```powershell
+cd c:\Users\andya\OneDrive\Documents\GitHub\week4-explainability\explainability
+python -m pip install -r requirements.txt
+python shap_explain.py
+```
+
+**Axes Key (SHAP)**
+
+- **SHAP summary plot (`outputs/shap_summary.png`):**
+	- **X-axis:** SHAP value — impact on model output (predicted probability for the explained class). Negative values push prediction toward class 0, positive toward class 1. Each point is one sample-feature contribution; color encodes the raw feature value (low→high).
+	- **Y-axis:** Feature names — features sorted by importance (top = most important by mean absolute SHAP value).
+
+- **SHAP global importance (`outputs/shap_global_importance.png`):**
+	- **X-axis:** Mean |SHAP value| — average absolute impact across samples (importance magnitude).
+	- **Y-axis:** Feature names — sorted by mean absolute SHAP value.
+
